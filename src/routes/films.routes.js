@@ -7,11 +7,11 @@ router.get('/', filmsCtrl.getAllFilms);
 
 router.post('/', filmsCtrl.addFilm);
 
+router.get('/search', filmsCtrl.searchFilm);
+
+router.get('/director/:id', filmsCtrl.getFilmsByDirectorId);
+
 router.get('/:id', filmsCtrl.getOneFilm);
-
-router.get('/director/:id', filmsCtrl.getFilmsByDirector);
-
-/* router.get('/:name', filmsCtrl.getOneFilm); */
 
 router.delete('/:id', filmsCtrl.deleteFilm);
 
